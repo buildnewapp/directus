@@ -138,6 +138,7 @@ function removeField(fieldKey: string) {
 			<template v-for="header in tableHeaders" :key="header.value" #[`item.${header.value}`]="{ item }">
 				<render-display
 					:value="getFromAliasedItem(item, header.value)"
+					:record="item"
 					:display="header.field.display"
 					:options="header.field.displayOptions"
 					:interface="header.field.interface"

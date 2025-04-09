@@ -8,6 +8,7 @@ const props = defineProps<{
 	interface?: string;
 	interfaceOptions?: Record<string, unknown>;
 	value?: string | number | boolean | Record<string, unknown> | unknown[];
+	record?:any;
 	type: string;
 	collection: string;
 	field: string;
@@ -28,6 +29,7 @@ const displayInfo = useExtension('display', display);
 			:interface="interface"
 			:interface-options="interfaceOptions"
 			:value="value"
+			:record="record"
 			:type="type"
 			:collection="collection"
 			:field="field"
